@@ -44,7 +44,7 @@
 
 .healthbar::after {
   content: "";
-  background-color: rgb(255, 87, 87);
+  background-color: rgb(227, 68, 47);
   position: absolute;
   width: 70%;
   height: 100%;
@@ -54,7 +54,7 @@
 
 .coinbar::after {
   content: "";
-  background-color: rgb(211, 211, 0);
+  background-color: rgb(254, 201, 0);
   position: absolute;
   width: 80%;
   height: 100%;
@@ -71,7 +71,7 @@
   padding: 0.3rem 2rem;
   text-align: center;
   border-radius: 1rem;
-  background-color: yellow;
+  background-color: rgb(254, 201, 0);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -116,7 +116,6 @@
 }
 
 /* rank */
-
 .icon--cup {
   width: 5rem;
 }

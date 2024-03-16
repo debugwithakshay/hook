@@ -12,8 +12,8 @@ body {
   font-family: "VT323";
 }
 
-main{
-    padding: 1rem;
+main {
+  padding: 1rem;
 }
 
 /* fonts */
@@ -22,3 +22,27 @@ main{
   src: url(/fonts/VT323/VT323-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Poppins-light";
+  src: url(fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-medium";
+  src: url(fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-semibold";
+  src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-bold";
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-black";
+  src: url(fonts/Poppins/Poppins-Black.ttf);
+}

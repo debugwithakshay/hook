@@ -1,0 +1,164 @@
+.progress-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 15rem;
+  height: 15rem;
+  background: conic-gradient(#4d4dff 70deg, #dcdcdc 0deg);
+  border-radius: 50%;
+}
+
+.progress-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13.5rem;
+  height: 13.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.goku {
+  position: absolute;
+  width: 7rem;
+  z-index: 9999;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+}
+
+/* focus time */
+.focus-time {
+  position: absolute;
+  font-family: "Poppins-bold";
+  font-size: 2.2rem;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.lap-box {
+  position: absolute;
+  font-family: "Poppins-medium";
+  font-size: 1.2rem;
+  z-index: 9999;
+  left: 50%;
+  top: 75%;
+  transform: translateX(-50%);
+}
+
+/* taskbox */
+.task-box {
+  width: 20rem;
+  height: 30rem;
+  border: 3px solid black;
+  margin-left: 5rem;
+  background-color: rgb(254, 201, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.task-box--header {
+  display: flex;
+  align-items: center;
+}
+
+.add-task {
+  color: #000;
+  font-size: 1.5rem;
+  font-family: "Poppins-bold";
+  margin-left: 2rem;
+  background-color: #fff;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.task-box--heading {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Pixelated";
+  margin-left: 5px;
+}
+
+.task-box--progress {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  background: conic-gradient(#ffffff 70deg, #000000 0deg);
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.task-box--progress::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.task-box--progress div {
+  display: flex;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  font-size: 0.7rem;
+  font-family: "Poppins-bold";
+}
+
+.task {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding: 1rem 0.5rem;
+  display: flex;
+  padding: 1rem 0.5rem;
+  background-color: rgb(254, 144, 231);
+  border-radius: 0.2rem;
+  position: relative;
+}
+
+.checkbox {
+  width: 2rem;
+  height: auto;
+  accent-color: rgb(227, 68, 47);
+  margin-right: 5px;
+}
+
+.task-heading {
+  font-size: 1rem;
+  font-family: "Poppins-medium";
+}
+
+.delete-task {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.task-box--header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: black;
+}
