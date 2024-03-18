@@ -1,0 +1,13 @@
+.battlefield-heading{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-family: "Poppins-bold";
+    font-size: 3rem;
+}
+
+.battlefield-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

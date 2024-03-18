@@ -1,0 +1,47 @@
+.progress-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-block-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.progress-block-row{
+    display: flex;
+    gap: 1rem;
+}
+
+.progress-block {
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.progress-block-row .completed-block{
+    background-color: rgb(34, 160, 148);
+}
+
+.progress-data-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.yesterday-data,
+.today-data,
+.custom-data,
+.total-data{
+    font-family: "Poppins-semibold";
+}
+
+.custom-data{
+    margin-bottom: 2rem;
+}
+
+

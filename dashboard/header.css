@@ -11,6 +11,7 @@
 .icon--burger {
   width: 4rem;
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 /* status box */
@@ -76,6 +77,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .dashboard_header .day_box::after {
@@ -118,9 +120,11 @@
 /* rank */
 .icon--cup {
   width: 5rem;
+  cursor: pointer;
 }
 
 /* battlefield */
 .icon--sword {
   width: 3rem;
+  cursor: pointer;
 }
