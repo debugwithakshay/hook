@@ -7,6 +7,7 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="challenge_box.css" />
     <link rel="stylesheet" href="dashboard/header.css" />
     <link rel="stylesheet" href="dashboard/main.css" />
     <link rel="stylesheet" href="progress_page/progress_page.css" />
@@ -15,7 +16,17 @@
     <title>Hook - Let your brain flow</title>
   </head>
   <body>
+    <div class="main-blanket"></div>
     <main>
+      <div class="start-challenge-box">
+        <h1>Are You Sure?</h1>
+        <img src="assets/start_challenge.gif" alt="start challenge">
+        <button class="start-challenge-btn">Start Challenge</button>
+        <span class="close-start-challenge-btn">
+          &Cross;
+        </span>
+      </div>
+      
       <!-- Dashboard -->
       <div class="dashboard_header">
         <img
@@ -511,10 +522,7 @@
                 </div>
               </div>
             </div>
-            <div class="task-container">
-
-
-            </div>
+            <div class="task-container"></div>
           </div>
 
           <!-- Noon task -->
@@ -538,11 +546,7 @@
                 </div>
               </div>
             </div>
-            <div class="task-container">
-              
-
-
-            </div>
+            <div class="task-container"></div>
           </div>
 
           <!-- evening taskbox -->
@@ -566,9 +570,7 @@
                 </div>
               </div>
             </div>
-            <div class="task-container">
-              
-            </div>
+            <div class="task-container"></div>
           </div>
         </div>
       </section>
@@ -579,5 +581,6 @@
     <script src="morning_todo.js" defer></script>
     <script src="noon_todo.js" defer></script>
     <script src="evening_todo.js" defer></script>
+    <script src="start_challenge.js" defer></script>
   </body>
 </html>

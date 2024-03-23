@@ -1,0 +1,55 @@
+.start-challenge-box {
+  display: inline;
+  position: absolute;
+  width: 50rem;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 9999999;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1),
+    -1rem -1rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.start-challenge-box h1 {
+  font-family: "Poppins-bold";
+  font-size: 3rem;
+}
+
+.start-challenge-box img {
+  border-radius: 5px;
+}
+
+.start-challenge-box .start-challenge-btn {
+  padding: 5px 10px;
+  font-family: "Pixelated";
+  font-size: 2rem;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-start-challenge-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.main-blanket {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  z-index: 99999;
+  transition: all 0.3s;
+}
