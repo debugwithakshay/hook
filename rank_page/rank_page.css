@@ -1,159 +1,65 @@
 .rank-page {
   width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
 
-.rank-holders-box {
+.avilable-ranks-container {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
-  width: 70%;
-  justify-content: center;
-}
-
-.rank-holder {
-  width: 15rem;
-  height: 15rem;
-  border: 3px solid black;
-}
-
-.rank-holder-image {
-  width: 100%;
-  height: 90%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.rank-holder:nth-child(1) .rank-holder-image {
-  background-image: url(../assets/rank_images/recruit.png);
-}
-
-.rank-holder:nth-child(2) .rank-holder-image {
-  background-image: url(../assets/rank_images/novice.png);
-}
-
-.rank-holder:nth-child(3) .rank-holder-image {
-  background-image: url(../assets/rank_images/trainee.png);
-}
-
-.rank-holder:nth-child(4) .rank-holder-image {
-  background-image: url(../assets/rank_images/challenger.png);
-}
-
-.rank-holder:nth-child(5) .rank-holder-image {
-  background-image: url(../assets/rank_images/soldier.png);
-}
-
-.rank-holder:nth-child(6) .rank-holder-image {
-  background-image: url(../assets/rank_images/warrior.png);
-}
-
-.rank-holder:nth-child(7) .rank-holder-image {
-  background-image: url(../assets/rank_images/champion.png);
-}
-
-.rank-holder:nth-child(8) .rank-holder-image {
-  background-image: url(../assets/rank_images/sergeant.png);
-}
-
-.rank-holder:nth-child(9) .rank-holder-image {
-  background-image: url(../assets/rank_images/lieutenant.png);
-}
-
-.rank-holder:nth-child(10) .rank-holder-image {
-  background-image: url(../assets/rank_images/ninja.png);
-}
-
-.rank-holder:nth-child(11) .rank-holder-image {
-  background-image: url(../assets/rank_images/monk.avif);
-}
-
-.rank-holder:nth-child(12) .rank-holder-image {
-  background-image: url(../assets/rank_images/moon_night.png);
-}
-
-.rank-holder:nth-child(13) .rank-holder-image {
-  background-image: url(../assets/rank_images/champion_of_the_light.png);
-}
-
-.rank-holder:nth-child(14) .rank-holder-image {
-  background-image: url(../assets/rank_images/night_god.png);
-}
-
-.rank-holder:nth-child(15) .rank-holder-image {
-  background-image: url(../assets/rank_images/immortal.png);
-}
-
-.user-rank-box {
-  display: flex;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.currunt-rank-box,
-.next-rank-box {
-  width: 13rem;
-  height: 13rem;
-  border: 2px solid;
+.avilable-rank-box {
+  border: 2px solid black;
+  width: 17rem;
+  height: 17rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-.currunt-rank-box h2,
-.next-rank-box h2 {
-  font-family: "Poppins-bold";
-  text-align: center;
-}
-
-.currunt-rank-image,
-.next-rank-image {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 70%;
-}
-
-.currunt-rank-image {
-  background-image: url(../assets/rank_images/recruit.png);
-}
-
-.next-rank-image {
-  background-image: url(../assets/rank_images/novice.png);
-}
-
-.currunt-rank-data,
-.next-rank-data,
-.rank-holder-data {
+.about-rank {
+  display: flex;
+  align-items: center;
   font-family: "Pixelated";
   font-size: 1.5rem;
-  text-align: center;
 }
 
-.rank-image-blanket {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
+.rank-title {
+  font-family: "Poppins-medium";
+  font-size: 1rem;
+}
+
+.rank-duration {
+  font-family: "Pixelated";
+}
+
+.rank-image {
+  width: 15rem;
 }
 
 .rank-locked {
-  background-color: rgba(255, 255, 255, 0.533);
+  position: relative;
 }
 
-.rank-unlocked {
-  background-color: transparent;
+.lock-blanket {
+  width: 100%;
+  height: 93%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon--lock {
+.lock-image {
   width: 10rem;
   position: absolute;
-  z-index: 99999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 9999;
 }

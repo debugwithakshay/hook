@@ -13,7 +13,7 @@ function startChallengelater() {
     mainBlanket.style.display = "none";
   });
 }
-startChallengelater()
+startChallengelater();
 
 //when user click on start challenge
 function startChallenge() {
@@ -23,13 +23,27 @@ function startChallenge() {
     localStorage.setItem("challengeStarted", "yes");
     startChallengeBox.style.display = "none";
     mainBlanket.style.display = "none";
+
+    let dateTime = new Date();
+
+    let challengeStartedDate = dateTime.getDate();
+    let challengeStartedMonth = dateTime.getMonth() + 1;
+    let challengeStartedYear = dateTime.getFullYear();
+    
+
+    console.log(
+      challengeStartedDate,
+      challengeStartedMonth,
+      challengeStartedYear
+    );
   });
 }
 startChallenge();
 
 //check if challengeStarted or not
+let challengeStatus;
 function checkChallengeStatus() {
-  let challengeStatus = localStorage.getItem("challengeStarted");
+  challengeStatus = localStorage.getItem("challengeStarted");
 
   if (challengeStatus == "yes") {
     console.log("Start ho Chuka hai");
@@ -37,7 +51,6 @@ function checkChallengeStatus() {
     mainBlanket.style.display = "none";
   } else {
     console.log("Abhi nhi start hua hai");
-    
   }
 }
 checkChallengeStatus();

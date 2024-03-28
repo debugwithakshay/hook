@@ -16,17 +16,20 @@
     <title>Hook - Let your brain flow</title>
   </head>
   <body>
+    <!-- sound effetc -->
+    <audio src="sounds/pomoEnd.mp3" id="pomoEndSound"></audio>
+    <audio src="sounds/restEnd.mp3" id="restEndSound"></audio>
+    <audio src="sounds/pomoRound.mp3" id="roundEndSound"></audio>
+
     <div class="main-blanket"></div>
     <main>
       <div class="start-challenge-box">
         <h1>Are You Sure?</h1>
-        <img src="assets/start_challenge.gif" alt="start challenge">
+        <img src="assets/start_challenge.gif" alt="start challenge" />
         <button class="start-challenge-btn">Start Challenge</button>
-        <span class="close-start-challenge-btn">
-          &Cross;
-        </span>
+        <span class="close-start-challenge-btn"> &Cross; </span>
       </div>
-      
+
       <!-- Dashboard -->
       <div class="dashboard_header">
         <img
@@ -35,17 +38,13 @@
           class="icon--burger"
         />
         <div class="status_box">
-          <div class="health_box">
-            <img src="assets/heart.png" alt="health" class="icon--heart" />
-            <div class="healthbar bar"></div>
-          </div>
           <div class="coin_box">
             <img src="assets/coin.png" alt="coin" class="icon--coin" />
             <div class="coinbar bar"></div>
           </div>
         </div>
         <div class="day_box">
-          <h1>Day <span class="day">1</span></h1>
+          <h1>Day <span class="day">0</span></h1>
         </div>
         <div class="dashboard_header--right">
           <img src="assets/cup.png" alt="rank" class="icon--cup" />
@@ -55,19 +54,15 @@
 
       <section class="dashboard_main">
         <div class="progress-circle">
-          <img src="assets/goku.gif" alt="goku" class="goku" />
+          <img src="assets/goku.gif" alt="goku" class="pomo-img" />
           <span class="focus-time">
-            <span class="focus-min">25</span>
+            <span class="focus-min">45</span>
             <span class="seperator-colon">:</span>
             <span class="focus-sec">00</span>
           </span>
-
-          <span class="lap-box">
-            <span class="currunt-lap">1</span>
-            <span class="seperator-slash">/</span>
-            <span class="total-lap">4</span>
-          </span>
         </div>
+
+        <button class="pomodoro_start_btn">Start Pomodoro</button>
 
         <div class="task-box pomo-task-box">
           <div class="add-task-input-box">
@@ -120,9 +115,9 @@
         <div class="progress-block-box">
           <!-- row 1 -->
           <div class="progress-block-row">
-            <div class="progress-block completed-block"></div>
-            <div class="progress-block completed-block"></div>
-            <div class="progress-block completed-block"></div>
+            <div class="progress-block"></div>
+            <div class="progress-block"></div>
+            <div class="progress-block"></div>
             <div class="progress-block"></div>
             <div class="progress-block"></div>
             <div class="progress-block"></div>
@@ -332,166 +327,263 @@
 
       <!-- rank -->
       <section class="rank-page">
-        <div class="user-rank-box">
-          <div class="currunt-rank-box">
-            <h2>Current Rank</h2>
-            <p class="currunt-rank-data">Recruit:(Day1)</p>
-            <div class="currunt-rank-image"></div>
-          </div>
-          <div class="next-rank-box">
-            <h2>Next Rank</h2>
-            <p class="next-rank-data">Novice:(Day3)</p>
-            <div class="next-rank-image"></div>
-          </div>
-        </div>
-
-        <div class="rank-holders-box">
-          <!-- rank Recruit -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-unlocked"></div>
+        <div class="avilable-ranks-container">
+          <!-- rank1: Recruit -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Recruit</h3>
+              :Day
+              <span class="rank-duration">1</span>
             </div>
-            <p class="rank-holder-data">Recruit:(Day1)</p>
+            <img
+              src="assets/rank_images/recruit.png"
+              alt="rank1 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank Novice -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank2: novice -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Novice</h3>
+              :Day
+              <span class="rank-duration">3</span>
             </div>
-            <p class="rank-holder-data">Novice:(Day3)</p>
+            <img
+              src="assets/rank_images/novice.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank Trainee -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank3: Trainee -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Trainee</h3>
+              :Day
+              <span class="rank-duration">10</span>
             </div>
-            <p class="rank-holder-data">Trainee:(Day10)</p>
+            <img
+              src="assets/rank_images/trainee.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank chanllenger -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank4: challenger -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Challenger</h3>
+              :Day
+              <span class="rank-duration">15</span>
             </div>
-            <p class="rank-holder-data">Challenger:(Day15)</p>
+            <img
+              src="assets/rank_images/challenger.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank Soldier -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank5: Soldier -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Soldier</h3>
+              :Day
+              <span class="rank-duration">18</span>
             </div>
-            <p class="rank-holder-data">Soldier:(Day18)</p>
+            <img
+              src="assets/rank_images/soldier.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank warrior -->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank6: Worrior -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Worrior</h3>
+              :Day
+              <span class="rank-duration">25</span>
             </div>
-            <p class="rank-holder-data">Warrior:(Day25)</p>
+            <img
+              src="assets/rank_images/warrior.png"
+              alt="rank2 image"
+              class="rank-image"
+              style="width: 200px"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank champion-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank7: Champion -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Champion</h3>
+              :Day
+              <span class="rank-duration">32</span>
             </div>
-            <p class="rank-holder-data">Champion:(Day32)</p>
+            <img
+              src="assets/rank_images/champion.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank sergent-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank8: Sergent -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Sergent</h3>
+              :Day
+              <span class="rank-duration">40</span>
             </div>
-            <p class="rank-holder-data">Sergent:(Day40)</p>
+            <img
+              src="assets/rank_images/sergeant.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank lieutenant-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank9: Lieutenant -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Lieutenant</h3>
+              :Day
+              <span class="rank-duration">55</span>
             </div>
-            <p class="rank-holder-data">Lieutenant:(Day55)</p>
+            <img
+              src="assets/rank_images/lieutenant.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank ninja-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank10: Ninja -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Ninja</h3>
+              :Day
+              <span class="rank-duration">65</span>
             </div>
-            <p class="rank-holder-data">Ninja:(Day65)</p>
+            <img
+              src="assets/rank_images/ninja.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank monk-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank11: Monk -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Monk</h3>
+              :Day
+              <span class="rank-duration">75</span>
             </div>
-            <p class="rank-holder-data">Lieutenant:(Day75)</p>
+            <img
+              src="assets/rank_images/monk.avif"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank moon Knight-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank11: Moon Knight -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Moon Knight</h3>
+              :Day
+              <span class="rank-duration">85</span>
             </div>
-            <p class="rank-holder-data">Moon Knight:(Day85)</p>
+            <img
+              src="assets/rank_images/moon_night.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank Nightgod-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank100: Champion of the light -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Champion of light</h3>
+              :Day
+              <span class="rank-duration">100</span>
             </div>
-            <p class="rank-holder-data">Champion of the light:(Day100)</p>
+            <img
+              src="assets/rank_images/champion_of_the_light.png"
+              alt="rank2 image"
+              class="rank-image"
+              style="width: 150px"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank Night god-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank14: Knight God -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">Knight God</h3>
+              :Day
+              <span class="rank-duration">120</span>
             </div>
-            <p class="rank-holder-data">Night god:(Day120)</p>
+            <img
+              src="assets/rank_images/night_god.png"
+              alt="rank2 image"
+              class="rank-image"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
 
-          <!-- rank immortal-->
-          <div class="rank-holder">
-            <div class="rank-holder-image">
-              <div class="rank-image-blanket rank-locked">
-                <img src="assets/lock.png" alt="lock" class="icon--lock" />
-              </div>
+          <!-- rank15: The Immortal -->
+          <div class="avilable-rank-box rank-locked">
+            <div class="about-rank">
+              <h3 class="rank-title">The Immortal</h3>
+              :Day
+              <span class="rank-duration">150</span>
             </div>
-            <p class="rank-holder-data">The immortal:(Day150)</p>
+            <img
+              src="assets/rank_images/immortal.png"
+              alt="rank2 image"
+              class="rank-image"
+              style="width: 150px"
+            />
+            <div class="lock-blanket">
+              <img src="assets/lock.png" alt="lock" class="lock-image" />
+            </div>
           </div>
         </div>
       </section>
@@ -576,11 +668,15 @@
       </section>
     </main>
 
+    <!-- scripts -->
     <script src="page_switch.js" defer></script>
     <script src="pomo_todo.js" defer></script>
     <script src="morning_todo.js" defer></script>
     <script src="noon_todo.js" defer></script>
     <script src="evening_todo.js" defer></script>
     <script src="start_challenge.js" defer></script>
+    <script src="progress_page.js" defer></script>
+    <script src="rank_working.js" defer></script>
+    <script src="pomodoro.js" defer></script>
   </body>
 </html>
